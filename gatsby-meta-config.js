@@ -1,8 +1,8 @@
 module.exports = {
-  title: `zoomkoding.com`,
-  description: `줌코딩의 개발일기`,
+  title: `howyoujini`,
+  description: `어떡해든 어떻게든 개발`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.zoomkoding.com`,
+  siteUrl: `https://howyoujini.github.io/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
@@ -11,11 +11,11 @@ module.exports = {
   },
   ga: '0', // Google Analytics Tracking ID
   author: {
-    name: `정진혁`,
+    name: `홍유진`,
     bio: {
-      role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      role: `크리에이티브 코더`,
+      description: ['아름다운 경험을 주는', '창의적으로 생각하는', '더 나은 것을 만드는'],
+      thumbnail: 'assets/profile.gif', // Path to the image in the 'asset' folder
     },
     social: {
       github: ``, // `https://github.com/zoomKoding`,
