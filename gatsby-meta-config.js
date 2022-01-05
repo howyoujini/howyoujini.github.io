@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `크리에이티브 코더`,
       description: ['아름다운 경험을 주는', '창의적으로 생각하는', '더 나은 것을 만드는'],
-      thumbnail: 'assets/profile.gif', // Path to the image in the 'asset' folder
+      thumbnail: 'profile.gif', // Path to the image in the 'asset' folder
     },
     social: {
       github: ``, // `https://github.com/zoomKoding`,
