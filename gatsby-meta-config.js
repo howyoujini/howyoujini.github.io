@@ -13,8 +13,8 @@ module.exports = {
   author: {
     name: `홍유진`,
     bio: {
-      role: `크리에이티브 코더`,
-      description: ['아름다운 경험을 주는', '창의적으로 생각하는', '더 나은 것을 만드는'],
+      role: `크리에이티브 디벨로퍼`,
+      description: ['아름다운 경험을 주는', '창의적으로 생각하는', '더 나은 것을 설계하는'],
       thumbnail: 'profile.gif', // Path to the image in the 'asset' folder
     },
     social: {
