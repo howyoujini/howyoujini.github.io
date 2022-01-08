@@ -1,5 +1,5 @@
 <h1 align="center">
-  Zoomkoding Gatsby Blog
+  howyoujini Gatsby Blog
 </h1>
 
 <p align="center">
