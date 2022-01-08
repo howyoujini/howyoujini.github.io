@@ -1,7 +1,7 @@
 ---
 emoji: ♻️
 title: axios fetch의 차이는?
-date: '2021-11-23 22:00:00'
+date: '2021-11-22 22:00:00'
 author: 홍유진
 tags: axios fetch
 categories: 웹공부

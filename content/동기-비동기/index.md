@@ -1,7 +1,7 @@
 ---
 emoji: 🧢
-title: 아니 그래서, 도대체 동기(sync), 비동기(async)가 뭔데?
-date: '2021-11-06 23:00:00'
+title: 아니 그래서! 도대체 동기(sync), 비동기(async)가 뭔데?
+date: '2021-11-07 23:00:00'
 author: 홍유진
 tags: 동기 비동기
 categories: 웹공부

@@ -1,7 +1,7 @@
 ---
 emoji: 🧢
 title: three.js로 '움직이는 책' 만들어보기
-date: '2021-10-30 23:00:00'
+date: '2021-12-16 23:00:00'
 author: 홍유진
 tags: three.js
 categories: 웹공부 3D

@@ -1,7 +1,7 @@
 ---
 emoji: 🧢
 title: layout의 모든 것
-date: '2021-11-06 23:00:00'
+date: '2021-10-26 23:00:00'
 author: 홍유진
 tags: css flex grid layout
 categories: 웹공부 UX/UI

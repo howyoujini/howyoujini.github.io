@@ -1,7 +1,7 @@
 ---
 emoji: ♻️
 title: http 통신
-date: '2021-12-29 22:00:00'
+date: '2021-11-21 22:00:00'
 author: 홍유진
 tags: http stateless stateful GET POST
 categories: 웹공부 Network
