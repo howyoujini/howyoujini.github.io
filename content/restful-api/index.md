@@ -13,6 +13,8 @@ categories: 웹공부 Network
 
 ## 👋 소개
 
+<!-- https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html -->
+
 블로그를 직접 운영하면서 조금씩 그려봤던 이상적인 개발 블로그 테마를 Gatsby를 통해 만들어보게 되었습니다.  
 이 테마가 블로그를 운영하고자 하시는 분들에게 자신의 이야기를 잘 담을 수 있는 공간이 되었으면 좋겠습니다.🙌
 
@@ -197,6 +199,85 @@ categories: tutorial
 
 > 🤔 혹시 특정 기능이 없어서 테마 사용을 망설이시거나 제안하고 싶으신 기능이 있으시다면,  
 > 👉 [여기](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/40)에 댓글 남겨주세요! 적극적으로 반영하겠습니다 :)
+
+_<p style="font-size:16px; color:grey">**API**, 처음 들었을 때 굉장히 있어보이면서 나랑은 친해지기 어려운 용어라고 생각했다.
+사용자와 프로덕트간을 연결해주는 것을 UI(User Interface)라는 것은 익히 알고 있었지만
+API라는 단어는 너무 생소하고 벽으로 느껴졌다.
+계속 멀게만 느낄 수 없기에 **드디어** API를 마주보고 파헤쳐보는 시간을 가지게 되었다.</p>_
+
+### API 란?
+
+`Application Programming Interface`의 약자로 프로그램을 실행하는 인터페이스
+
+### RESTful API 란?
+
+`Representational State Transfer`의 약자로
+웹상에서 사용되는 여러 리소스를 HTTP URI로 표현하고 그 리소스에 대한 행위를 HTTP Method로 정의하는 방식.
+즉, 리소스(HTTP URI로 정의된)를 어떻게 한다는 구조적으로(HTTP Method + Payload) 깔끔히 표현
+
+-> uri 자체로 정보를 표현할 수 있어야한다
+
+API :
+GraphQL
+gRPC
+REST : 학습에 있어서 진입장벽이 낮다. 비싼 프로그램이 필요없다.
+
+https://meetup.toast.com/posts/92
+
+![](https://images.velog.io/images/howyoujini/post/6e960ffc-bec3-4bc4-8139-afb783abbe2e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.19.17.png)
+![](https://images.velog.io/images/howyoujini/post/f01924ab-78b0-42ab-804c-d70d128007db/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.25.30.png)
+![](https://images.velog.io/images/howyoujini/post/6a7312b8-4c21-4cd7-866a-d8f94a0e7bb2/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.25.54.png)
+![](https://images.velog.io/images/howyoujini/post/724f0279-c7eb-411c-857d-07a965b1a67d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-11-24%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%202.19.15.png)
+
+self descriptiveness
+
+RESTful API 설계규칙
+URI 정보를 명확하게 표현해야한다.
+
+- resoude는 명사를 사용
+  GET/user/1 -> GET/users/1
+
+resource에 대한 행위를 HTTP Method (GET,POST, PUT, DELETE)로 표현한다.
+
+> **GET** : 조회 (받겠다)
+> **POST** : resource 생성 (보내겠다)
+> **PUT** : resource 전체 갱신 (놓겠다/ 넣겠다)
+> **DELETE** :resource 삭제 (지정한 서버의 파일을 삭제하겠다)
+
+- URI 에 HTTP Method가 포함되서는 안된다.
+- URI에 동사가 포함되서는 안된다.
+  GET/user/show/1 -> GET/users/1
+  POST insert/user/2 -> POST/users/2
+
+- resouce 사이에 연관관계가 있는 경우
+  리소스/고유ID/관계 있는 리소스
+  GET/users/{use_id}/profile
+- 파일의 경우 payload의 포맷을 나타내기 위한 파일 확장자를 URI에 포함시키지 않는다.
+  GET user/1/proffile-photo.jpg -> GET user/1/proffile-photo
+
+- URI는 / 구분자를 사용하여 자원의 계층 관계를 나타내는데 사용한다.
+- URI 마지막 문자로 /를 포함하지 않는다.
+  GET users/portfolios
+
+- 불가피하게 URI가 길어지는 경우 -를 사용하여 가독성을 높인다.
+- \_ 는 사용하지 않는다.
+  URI 경로에는 대문자 사용을 피하고 있다.
+
+![](https://images.velog.io/images/howyoujini/post/ade491c2-d846-49e7-9c87-c4527330b69b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.47.17.png)
+
+![](https://images.velog.io/images/howyoujini/post/faf8b554-8d54-4c08-a654-e663f37a4120/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.51.20.png)
+![](https://images.velog.io/images/howyoujini/post/bb17df64-8eb1-4a8b-ae28-6f8e9678e8c4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.56.36.png)![](https://images.velog.io/images/howyoujini/post/2dce894b-19f6-4309-be5b-e2684dce1303/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.51.29.png)
+![](https://images.velog.io/images/howyoujini/post/092e9bc3-a451-4f25-8852-04851ac57d75/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.54.34.png)
+![](https://images.velog.io/images/howyoujini/post/dcf9bff4-4de6-4def-aa3b-1bdb7358b602/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2011.59.02.png)
+
+![](https://images.velog.io/images/howyoujini/post/c979baa5-b69d-4307-8fa6-a8a62592a6e6/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2012.00.13.png)
+![](https://images.velog.io/images/howyoujini/post/e24cd4aa-507a-4dbf-8cba-d28ddc76343a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-02%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2012.02.05.png)
+
+-> Best Practice
+Query parameters -> Filtering, Sorting, Searching
+
+- [ ] RESTful API 개념을 이해하고 URL 주소를 RESTful 식으로 구현할 수 있다.
+- [ ] RESTful API 와 GraphQL 의 차이점을 이해하고 설명할 수 있다.
 
 ```toc
 

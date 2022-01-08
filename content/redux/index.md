@@ -3,7 +3,7 @@ emoji: ♻️
 title: 가장 상단에서 상태를 효율적으로 관리해야 한다면? Redux
 date: '2021-12-21 22:00:00'
 author: 홍유진
-tags: 리덕스 redux 전역상태관리 action
+tags: 리덕스 redux 전역상태관리 store action dispatch 디자인패턴
 categories: 웹공부
 ---
 
@@ -199,6 +199,166 @@ categories: tutorial
 
 > 🤔 혹시 특정 기능이 없어서 테마 사용을 망설이시거나 제안하고 싶으신 기능이 있으시다면,  
 > 👉 [여기](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/40)에 댓글 남겨주세요! 적극적으로 반영하겠습니다 :)
+
+`<react-redux>`
+
+- `Provider` : react app 전체에 제공할 store를 주입하는 장소
+- `useSelector` : store를 가져오는 역할 (state)
+- `useDispatch` : action을 reducer로 보내는 역할 (setState)
+
+하나의 자바스크립트 파일안에 액션 타입(Actions), 액션 생성 함수(Action Creators), 리듀서(Reducer)가 모두 들어있게 작성하는 패턴.
+
+`<규칙>`
+
+- MUST export default a function called reducer()
+  반드시 리듀서 함수를 default export해야 한다.
+- MUST export its action creators as functions
+  반드시 액션 생성 함수를 export해야 한다.
+- MUST have action types in the form npm-module-or-app/reducer/ACTION_TYPE
+  반드시 접두사를 붙인 형태로 액션 타입을 정의해야 한다. (아래 예제 코드 참고)
+- MAY export its action types as UPPER_SNAKE_CASE, if an external reducer needs to listen for them, or if it is a published reusable library
+  (필수는 아닌데) 외부 리듀서가 모듈 내 액션 타입을 바라보고 있거나, 모듈이 재사용 가능한 라이브러리로 쓰이는 것이라면 액션 타입을 UPPER_SNAKE_CASE 형태로 이름 짓고 export 하면 된다.
+
+`src/index.js`
+
+```js
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import App from './App';
+import rootReducer from './redux';
+
+const store = createStore(rootReducer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
+```
+
+`src/redux/index.js`
+
+```js
+import { combineReducers } from 'redux';
+import counter from './counter';
+import modal from './modal';
+import users from './users';
+
+const rootReducer = combineReducers({
+  counter,
+  todos,
+  users,
+});
+
+export default rootReducer;
+```
+
+`src/redux/counter.js` // 기능1
+
+```js
+// Action Type
+const INCREASE = 'counter/INCREASE';
+const DECREASE = 'counter/DECREASE';
+
+// 덕스 패턴에서는 액션 타입을 정의할 때 이와 같이 접두사를 붙임.
+// 다른 모듈과 이름이 중복되지 않게 하기 위함.
+
+// Action Creator & Action
+export const increase = () => ({ type: INCREASE });
+export const decrease = () => ({ type: DECREASE });
+
+// 모듈의 초기상태
+const initialState = { count: 0 };
+
+// Reducer
+export default function counter(state = initialState, action) {
+  switch (action.type) {
+    case INCREASE:
+      return { count: state.count + 1 };
+    case DECREASE:
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+```
+
+`src/redux/todos.js` // 기능2
+
+```js
+/* ----------------- 액션 타입 ------------------ */
+const ADD_TODO = 'todos/ADD_TODO';
+const TOGGLE_TODO = 'todos/TOGGLE_TODO';
+
+/* ----------------- 액션 생성 함수 ------------------ */
+let nextId = 1;
+export const addTodo = (text) => ({
+  type: ADD_TODO,
+  todo: {
+    id: nextId++,
+    text,
+  },
+});
+export const toggleTodo = (id) => ({
+  type: TOGGLE_TODO,
+  id,
+});
+
+/* ----------------- 모듈의 초기 상태 ------------------ */
+const initialState = []; // todo list
+// 아래와 같은 객체가 상태(배열)에 추가될 예정
+/**
+  {
+    id: 1,
+    text: '청소하기',
+    done: false,
+  }
+ */
+
+/* ----------------- 리듀서 ------------------ */
+export default function todos(state = initialState, action) {
+  switch (action.type) {
+    case ADD_TODO:
+      return state.concat(action.todo);
+    case TOGGLE_TODO:
+      return state.map((todo) => (todo.id === action.id ? { ...todo, done: !todo.done } : todo));
+    default:
+      return state;
+  }
+}
+```
+
+`src/App.js`
+
+```js
+import { useDispatch, useSelector } from 'react-redux';
+import { increase, decrease } from './redux/counter';
+
+export default function App() {
+  const counter = useSelector((store) => store.counter);
+  const dispatch = useDispatch();
+
+  const onIncrease = () => {
+    dispatch(increase());
+  };
+
+  const onDecrease = () => {
+    dispatch(decrease());
+  };
+
+  return (
+    <div className="App">
+      <h1>Hello Redux</h1>
+      <p>{counter.count}</p>
+      <button onClick={onIncrease}>+</button>
+      <button onClick={onDecrease}>-</button>
+    </div>
+  );
+}
+```
 
 ```toc
 

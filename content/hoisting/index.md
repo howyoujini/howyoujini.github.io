@@ -1,6 +1,6 @@
 ---
 emoji: 🧢
-title: const let var 그리고 hoisting
+title: const, let, var 그리고 hoisting
 date: '2021-10-29 16:00:00'
 author: 홍유진
 tags: 출발선
