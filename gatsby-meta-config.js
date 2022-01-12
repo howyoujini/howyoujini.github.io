@@ -33,7 +33,7 @@ module.exports = {
         date: '',
         activity: '',
         links: {
-          github: 'https://github.com/howyoujini',
+          github: '',
           post: '',
           googlePlay: '',
           appStore: '',
