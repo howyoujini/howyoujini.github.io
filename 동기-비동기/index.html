@@ -64,10 +64,267 @@
         }
       }
     })
-  </script><title data-react-helmet="true">아니 그래서, 도대체 동기(sync), 비동기(async)가 뭔데?</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="아니 그래서, 도대체 동기(sync), 비동기(async)가 뭔데?"/><meta data-react-helmet="true" property="og:site_title" content="아니 그래서, 도대체 동기(sync), 비동기(async)가 뭔데?"/><meta data-react-helmet="true" name="description" content="동기적 프로그래밍 동기적 프로그래밍"/><meta data-react-helmet="true" property="og:description" content="동기적 프로그래밍 동기적 프로그래밍"/><meta data-react-helmet="true" property="og:author" content="홍유진"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-c0fe5f7567b0e9a254ad.js"/><link as="script" rel="preload" href="/framework-0e1bf37de02f7cef2174.js"/><link as="script" rel="preload" href="/app-34d779c2755fe84db625.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"/><link as="fetch" rel="preload" href="/page-data/동기-비동기/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">howyoujini</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🧢</div><div class="info"><div class="categories"><a class="category" href="/posts/웹공부">웹공부</a></div></div><h1 class="title">아니 그래서, 도대체 동기(sync), 비동기(async)가 뭔데?</h1><div class="info"><div class="author">posted by <strong>홍유진</strong>,</div> <!-- -->November 06, 2021</div></header><div class="post-content"><div class="markdown"><!-- 프로젝트 UX/UI 웹공부 3D Network Server 아키텍쳐 Error -->
-<h2 id="동기적-프로그래밍" style="position:relative;"><a href="#%EB%8F%99%EA%B8%B0%EC%A0%81-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D" aria-label="동기적 프로그래밍 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>동기적 프로그래밍</h2>
+  </script><title data-react-helmet="true">아니 그래서! 도대체 동기(sync), 비동기(async)가 뭔데?</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="아니 그래서! 도대체 동기(sync), 비동기(async)가 뭔데?"/><meta data-react-helmet="true" property="og:site_title" content="아니 그래서! 도대체 동기(sync), 비동기(async)가 뭔데?"/><meta data-react-helmet="true" name="description" content="데이터를 주고받는 방식에는 에 따라 두가지 방식이 있다. -&gt;  ✔️ 동기(synchronous) 요청과 응답이 순차적으로 일어난다.
+즉, 요청을 보내면 응답이 오기전까지 아무것도 못하고 대기해야 한다.
+A노드와 B노드 사이의 작업 처리 단위(transaction)를 동시에 맞추겠다는 뜻이다.
+트랜잭션의 흐름이 순차적이기 때문에 설계가 매우 간단하고 직관적이다. transaction이란?
+데이터베이스의 상태를 변환시키는 하나의 논리적 기능을 수행하기 위한 작업의 단위.
+특징(ACID)을 가지며 transaction의 범위를 최소화하는 것이 시스템 성능상 효율적.  스타벅스에서 음료를 주문하기 위해 오더칸에서 한 사람씩 주문을 하고 
+그 다음 사람은 앞사람이 주문한 음료를 받고 나갈때까지 기다리고 주문을 하는 방식이다. :: blocking  데이터를 요청하고 데이터가 응답될 때까지 이후 작업들은 블로킹(blocking, 작업 중단)된다. ✔️ 비동기(asynchronous) 요청과 응…"/><meta data-react-helmet="true" property="og:description" content="데이터를 주고받는 방식에는 에 따라 두가지 방식이 있다. -&gt;  ✔️ 동기(synchronous) 요청과 응답이 순차적으로 일어난다.
+즉, 요청을 보내면 응답이 오기전까지 아무것도 못하고 대기해야 한다.
+A노드와 B노드 사이의 작업 처리 단위(transaction)를 동시에 맞추겠다는 뜻이다.
+트랜잭션의 흐름이 순차적이기 때문에 설계가 매우 간단하고 직관적이다. transaction이란?
+데이터베이스의 상태를 변환시키는 하나의 논리적 기능을 수행하기 위한 작업의 단위.
+특징(ACID)을 가지며 transaction의 범위를 최소화하는 것이 시스템 성능상 효율적.  스타벅스에서 음료를 주문하기 위해 오더칸에서 한 사람씩 주문을 하고 
+그 다음 사람은 앞사람이 주문한 음료를 받고 나갈때까지 기다리고 주문을 하는 방식이다. :: blocking  데이터를 요청하고 데이터가 응답될 때까지 이후 작업들은 블로킹(blocking, 작업 중단)된다. ✔️ 비동기(asynchronous) 요청과 응…"/><meta data-react-helmet="true" property="og:author" content="홍유진"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-c0fe5f7567b0e9a254ad.js"/><link as="script" rel="preload" href="/framework-0e1bf37de02f7cef2174.js"/><link as="script" rel="preload" href="/app-34d779c2755fe84db625.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"/><link as="fetch" rel="preload" href="/page-data/동기-비동기/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">howyoujini</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">📤 📥</div><div class="info"><div class="categories"><a class="category" href="/posts/웹공부">웹공부</a></div></div><h1 class="title">아니 그래서! 도대체 동기(sync), 비동기(async)가 뭔데?</h1><div class="info"><div class="author">posted by <strong>홍유진</strong>,</div> <!-- -->November 07, 2021</div></header><div class="post-content"><div class="markdown"><!-- 프로젝트 UX/UI 웹공부 3D Network Server 아키텍쳐 Error -->
+<blockquote>
+<p>데이터를 주고받는 방식에는 <code class="language-text">목적</code>에 따라 두가지 방식이 있다. -> <code class="language-text">요청과 응답이 순차적이거나 | 유연하거나</code></p>
+</blockquote>
+<h2 id="️-동기synchronous" style="position:relative;"><a href="#%EF%B8%8F-%EB%8F%99%EA%B8%B0synchronous" aria-label="️ 동기synchronous permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 동기(synchronous)</h2>
+<p>요청과 응답이 순차적으로 일어난다.</br>
+즉, 요청을 보내면 응답이 오기전까지 아무것도 못하고 대기해야 한다.</br>
+A노드와 B노드 사이의 작업 처리 단위(<strong>transaction</strong>)를 동시에 맞추겠다는 뜻이다.</br>
+<strong>트랜잭션</strong>의 흐름이 순차적이기 때문에 설계가 매우 간단하고 직관적이다.</p>
+<blockquote>
+<p><strong><a href="/transaction">transaction이란?</a></strong></br>
+데이터베이스의 상태를 변환시키는 <U>하나의 논리적 기능</U>을 수행하기 위한 작업의 단위.</br>
+특징(ACID)을 가지며 transaction의 범위를 최소화하는 것이 시스템 성능상 효율적.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGN2VlRH//EABkQAAIDAQAAAAAAAAAAAAAAAAADAQITFP/aAAgBAQABBQLFhWDmef/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABkRAAIDAQAAAAAAAAAAAAAAAAECAxASQf/aAAgBAgEBPwGY7ZSeV//EABgQAAIDAAAAAAAAAAAAAAAAAAABEDIz/9oACAEBAAY/AqOM2f/EABcQAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQEAAT8hsQOk7N//2gAMAwEAAgADAAAAEHwP/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/EHB//8QAFhEAAwAAAAAAAAAAAAAAAAAAEGGh/9oACAECAQE/EGKUf//EABsQAQACAgMAAAAAAAAAAAAAAAEAESHRMVHB/9oACAEBAAE/EG089x9YYIpjletz/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AdobeColor.jpeg"
+        title="AdobeColor.jpeg"
+        src="/static/f0809dde8db59add131dd104082c6870/80e3c/AdobeColor.jpg"
+        srcset="/static/f0809dde8db59add131dd104082c6870/4ec73/AdobeColor.jpg 180w,
+/static/f0809dde8db59add131dd104082c6870/158ba/AdobeColor.jpg 360w,
+/static/f0809dde8db59add131dd104082c6870/80e3c/AdobeColor.jpg 720w,
+/static/f0809dde8db59add131dd104082c6870/47311/AdobeColor.jpg 1080w,
+/static/f0809dde8db59add131dd104082c6870/644c5/AdobeColor.jpg 1440w,
+/static/f0809dde8db59add131dd104082c6870/3a9e8/AdobeColor.jpg 2480w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>스타벅스에서 음료를 주문하기 위해 오더칸에서 한 사람씩 주문을 하고 </br>
+그 다음 사람은 <strong>앞사람이 주문한 음료를 받고 나갈때까지 기다리고</strong> 주문을 하는 방식이다.</p>
+</blockquote>
+<h3 id="-blocking" style="position:relative;"><a href="#-blocking" aria-label=" blocking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: blocking</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABcSAAAXEgFnn9JSAAABSElEQVQY02NgYGBgZGBgYPr//z8DCJwOyme4zaxgepdfuHSjikrpFRGhwltcCqFPDoYxFPTsZ3hyu5Th/2kGhg/bORh2TVVg+H+UgeH/KQYGkPb8FHMGhiVn3xsvO//RfMLaY84zd9+0WX7hnVXHgmda/xkYWP4zMAj/Z2Dgmt77WGLyulOubRvuOlw/Uejy/yhD3M+9zAmP1vGm/z/EEP//CEPU//8MHH0V2gwMjUtPWjUuPWlf3LfKu2rmTpfWFWcds3v3aLWzK0hskVDT3sQpqppXNEe2cvom99wJezzWr8z3eLyWLe7KMpGEfTNk0++u5ou/v4YvqjjTSlZAI4aHgYGBm52BQYiDgUGIlYFBhJ2BgZODQcCUi8GrjoshZSs7Q/xyDk71IG4GBgE2BgY2VgaGMHYGhv8sUMwEY0sZJQiaO/ryAQDhgXNH0Bc6kQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="blocking.png"
+        title="blocking.png"
+        src="/static/41eb65898b34210348c9e4a6ceb8a2da/0a47e/blocking.png"
+        srcset="/static/41eb65898b34210348c9e4a6ceb8a2da/e9ff0/blocking.png 180w,
+/static/41eb65898b34210348c9e4a6ceb8a2da/f21e7/blocking.png 360w,
+/static/41eb65898b34210348c9e4a6ceb8a2da/0a47e/blocking.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>데이터를 요청하고 데이터가 응답될 때까지 이후 작업들은 블로킹(blocking, 작업 중단)된다.</p>
+</br>
+<h2 id="️-비동기asynchronous" style="position:relative;"><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0asynchronous" aria-label="️ 비동기asynchronous permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 비동기(asynchronous)</h2>
+<p>요청과 응답이 순차적으로 일어나지 않고 유연하게 일어난다.</br>
+즉, 요청을 보내고 응답이 올때까지 기다리지 않고 그 다음 작업을 수행한다.</br>
+노드 사이의 작업 처리 단위(<strong>transaction</strong>)를 동시에 맞추지 않아도 된다.</br>
+<strong>트랜잭션</strong>의 흐름이 유연하기 때문에 설계가 ‘동기’보다는 복잡하다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGN2VlRH//EABkQAAIDAQAAAAAAAAAAAAAAAAADAQITFP/aAAgBAQABBQLFhWDmef/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABkRAAIDAQAAAAAAAAAAAAAAAAECAxASQf/aAAgBAgEBPwGY7ZSeV//EABgQAAIDAAAAAAAAAAAAAAAAAAABEDIz/9oACAEBAAY/AqOM2f/EABcQAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQEAAT8hsQOk7N//2gAMAwEAAgADAAAAEHwP/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/EHB//8QAFhEAAwAAAAAAAAAAAAAAAAAAEGGh/9oACAECAQE/EGKUf//EABsQAQACAgMAAAAAAAAAAAAAAAEAESHRMVHB/9oACAEBAAE/EG089x9YYIpjletz/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AdobeColor.jpeg"
+        title="AdobeColor.jpeg"
+        src="/static/f0809dde8db59add131dd104082c6870/80e3c/AdobeColor.jpg"
+        srcset="/static/f0809dde8db59add131dd104082c6870/4ec73/AdobeColor.jpg 180w,
+/static/f0809dde8db59add131dd104082c6870/158ba/AdobeColor.jpg 360w,
+/static/f0809dde8db59add131dd104082c6870/80e3c/AdobeColor.jpg 720w,
+/static/f0809dde8db59add131dd104082c6870/47311/AdobeColor.jpg 1080w,
+/static/f0809dde8db59add131dd104082c6870/644c5/AdobeColor.jpg 1440w,
+/static/f0809dde8db59add131dd104082c6870/3a9e8/AdobeColor.jpg 2480w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<blockquote>
+<p>스타벅스에서 ‘고객’은 음료를 주문하는 것(<strong>요청</strong>)이 목적이고 ‘직원’은 음료를 제조하여 내보내는 것(<strong>응답</strong>)이 목적이다. </br>
+서로 목적이 다르기 때문에 다음 고객이 앞 고객의 음료를 <strong>기다릴 필요가 없이</strong> 본인의 주문을 하고 있으면 된다.</p>
+</blockquote>
+<h3 id="-non-blocking" style="position:relative;"><a href="#-non-blocking" aria-label=" non blocking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: non-blocking</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 23.333333333333332%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcSAAAXEgFnn9JSAAABnElEQVQY02MwcQjSMHEIBGN7B3/RrfwMDK+5uAPOSYhVH5CTrbgkJlJ5R0AmwMvzOu9EuzrWT///M/TNPcG45PwXhsXnvjDMOfSEYc7hpwxw8P//f4atNz4z3P3/n2HWlf8gEaYnDNKud5h4o7dIKCc9Y+SO+sTAbcrA8J81jKGTo7RoFcOso1cYDn/9z5DTv5OBgUGTQcEimUHOPJVBzzaEgWHR6bdG03ddN5+06bzVkvMvDPuWv7a+t9Us8P9NBu//xxj9PxxkD/5/mcH36xb+6NVrVjh2b7lhNmf/HbNtj/9z5k7YzsDAIAM2UN48hUHXJpSBYeKOO44tiw9410xbHzxxy2Xnts2v7e9v0oz7voMh68YK4YJT8yTKPm5jzfywnTNt6ealXmWTN4d1rjzmUznvuBADAwOzjmsBu4JFMpu8eQqbrk0oG4Ogeogwn0aUII9GvICgeqiQoHqgEINkgQCDVJUgg3yxAINSIT+DTIUgg3iFAIdKjJCgXooAv0akoIxxvIiCRYqovHmyiIJFsoiceaqovm2wEgAauJKEKqtwCwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="non-blocking.png"
+        title="non-blocking.png"
+        src="/static/ee9f4c054a236189c0018293b5b93439/0a47e/non-blocking.png"
+        srcset="/static/ee9f4c054a236189c0018293b5b93439/e9ff0/non-blocking.png 180w,
+/static/ee9f4c054a236189c0018293b5b93439/f21e7/non-blocking.png 360w,
+/static/ee9f4c054a236189c0018293b5b93439/0a47e/non-blocking.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>데이터를 요청하고 데이터가 응답될 때까지 기다리지 않고(non-blocking) 이후 작업이 진행되다가 하나의 작업이 끝나면 응답이 실행된다.</p>
+<h1 id="br" style="position:relative;"><a href="#br" aria-label="br permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></br></h1>
+<hr>
+<h2 id="️-자바스크립트는-동기-비동기" style="position:relative;"><a href="#%EF%B8%8F-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EB%8F%99%EA%B8%B0-%EB%B9%84%EB%8F%99%EA%B8%B0" aria-label="️ 자바스크립트는 동기 비동기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 자바스크립트는 동기? 비동기?</h2>
+<p>결론부터 말하면 자바스크립트언어는 동기적 언어이다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'첫번째'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'두번째'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'세번째'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// -------</span>
+<span class="token comment">// '첫번째';</span>
+<span class="token comment">// '두번째';</span>
+<span class="token comment">// '세번째';</span></code></pre></div>
+<p>라고 했을 때, 결과는 순차적으로 일어난다.</p>
+<h3 id="-싱글스레드single-thread" style="position:relative;"><a href="#-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9Csingle-thread" aria-label=" 싱글스레드single thread permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: 싱글스레드(Single Thread)</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'첫번째'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'두번째'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'세번째'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// -------</span>
+<span class="token comment">// '첫번째';</span>
+<span class="token comment">// '세번째';</span>
+<span class="token comment">// '두번째';</span></code></pre></div>
+<h4 id="-call-stack" style="position:relative;"><a href="#-call-stack" aria-label=" call stack permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>::: Call Stack</h4>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADj0lEQVQ4y1WSe0xbBRTGvz6cjw0Mxsc0U6bLsmTLdGQZGo3JYInROGO2CMYxkq1RmLpI5lSQEV2MmcZkWwIkDBjMDRZ5rZS+bu+9pfRxy6VraW9vS+mL59qRwtimYRGN4RjgD8ZJTnJy/vjlO993cD+ei4Wxl3A7UoTUSAmW62I9oyp+Z2VEbYNZ5e59HkHvA0x4GZhuXIfAdAEH4gCqcNd0BuvqfmwVmBopRnq0SDHdAYW2sxKp4WcaxgYfP2fo+Qqybafa455BWuKfM3S3FQlM1+vPlrYDWRUgf8164L1YLv6dehFEAE1iQzRYk2Pheg+LlsLfetqOWK08czA58v4mCuPRqtZBtrrdT9/9fnOpptH8bnWjBT80s6r1wGguZuStMOk7lAWfELSdHa9F5NCiXYhcmJya/TuZHKPztXWvEGGD5lIgVnhxnD6sHaWaK05NVauAyla36honY+97x9YUxga3gdH1KZ9+gWD4o33f3YnkHXHI1ZtKTS+l07cXW1rqdhJBoXXF5B5vhnrEW9Rm9pQwA4MwDXjURJdx9ZuCNYU0/gQ4Xqc8eYmgNfbum8lMPHA57FqrtZ8EQaCmy0278NGV3HDiVpKWFpf+W7hD/0yKpT/1TaGRH1Ot2EUPeQgQmq7xiuVlV0fD7kQyLjGMqZbn2Rm7fSDV3PzLjr2fHsgOR8fTC3/eo3PdEuX/KFJ+Jfv1m+cnUFA7rdqyv2wtZbPtEE63A0NDUEue+s3RYf3bQZ8+z+s6kyNwFU/+FXv5sQU91C63WJJKyKfyKm0XcETgHjlq+hhfRIEvk8qsN06sApcTVn8uKXBoFCiObjnVJOa16oRvzbahw0SkMJ8FAglSXhVIVXdjCIArazkhFBNweg74lYCfCeq3qlaBK7eXuIBjduC4Mxu76zdhj2kzEaGtzw7J70ciMY70RBLdziiw1ZlDFMJNYwuOt8SVZ81zQCdh4/7qVWD2qx+g38oprZwFPMsU8jwfdDnsPpfTobPbHRpRFDWyLGskSdIEJEkTjwRL/cO+sj6DcRtrYcBaGMXGkm48lX90Deh0OtUOhwM228D3NpuNRFEkh9NJtv5+Cskyzc/PUyaTodnZDM3OzVE6nSaPx3PC6/XC5/Op1z12zp6DMBoNCoNBD52ub5fZZKrot1o/4ziunGUt5W63uzwyMlIeCoVWOhwOlwUCgZMMw2xnWRYcxykeBv4PZA0HvwmRJM0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="js-event-loop.png"
+        title="js-event-loop.png"
+        src="/static/46d9d93b4af7bab1c5485b8e4e73fa66/37523/js-event-loop.png"
+        srcset="/static/46d9d93b4af7bab1c5485b8e4e73fa66/e9ff0/js-event-loop.png 180w,
+/static/46d9d93b4af7bab1c5485b8e4e73fa66/f21e7/js-event-loop.png 360w,
+/static/46d9d93b4af7bab1c5485b8e4e73fa66/37523/js-event-loop.png 720w,
+/static/46d9d93b4af7bab1c5485b8e4e73fa66/5a190/js-event-loop.png 800w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<p>자바스크립트의 대부분의 DOM 이벤트와 Timer 함수(setTimeout, setInterval), Ajax (HTTP 요청)은 비동기식 처리 모델로 동작</p>
+<h3 id="-dom-이벤트-핸들러" style="position:relative;"><a href="#-dom-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%95%B8%EB%93%A4%EB%9F%AC" aria-label=" dom 이벤트 핸들러 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: DOM 이벤트 핸들러</h3>
+<h3 id="-timer-함수" style="position:relative;"><a href="#-timer-%ED%95%A8%EC%88%98" aria-label=" timer 함수 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: Timer 함수</h3>
+<h3 id="-ajax-http-요청" style="position:relative;"><a href="#-ajax-http-%EC%9A%94%EC%B2%AD" aria-label=" ajax http 요청 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: Ajax (HTTP 요청)</h3>
+<p>Ajax(Asynchronous JavaScript and XML)
+비동기식 처리
+<a href="https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started">mdn 공식문서 : Ajax</a></p>
+<hr>
+<h2 id="️-비동기식-처리방법" style="position:relative;"><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D-%EC%B2%98%EB%A6%AC%EB%B0%A9%EB%B2%95" aria-label="️ 비동기식 처리방법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 비동기식 처리방법</h2>
+<h3 id="-callback-함수" style="position:relative;"><a href="#-callback-%ED%95%A8%EC%88%98" aria-label=" callback 함수 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: Callback 함수</h3>
+<h3 id="-promise-객체" style="position:relative;"><a href="#-promise-%EA%B0%9D%EC%B2%B4" aria-label=" promise 객체 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: Promise 객체</h3>
+<h4 id="-resolve" style="position:relative;"><a href="#-resolve" aria-label=" resolve permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>::: resolve</h4>
+<h4 id="-reject" style="position:relative;"><a href="#-reject" aria-label=" reject permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>::: reject</h4>
+<h4 id="-then" style="position:relative;"><a href="#-then" aria-label=" then permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>::: then</h4>
+<h4 id="-catch" style="position:relative;"><a href="#-catch" aria-label=" catch permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>::: catch</h4>
+<h3 id="-async-await" style="position:relative;"><a href="#-async-await" aria-label=" async await permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>:: async await</h3>
+<p>Promise 객체를 활용한 ES7문법
+async만 붙이면 반환되는 값이 Promise 객체가 된다.</p>
+<h2 id="️-비동기-처리의-특성" style="position:relative;"><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%9D%98-%ED%8A%B9%EC%84%B1" aria-label="️ 비동기 처리의 특성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 비동기 처리의 특성</h2>
+<h2 id="️-에러-처리방법" style="position:relative;"><a href="#%EF%B8%8F-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC%EB%B0%A9%EB%B2%95" aria-label="️ 에러 처리방법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✔️ 에러 처리방법</h2>
 <div class="table-of-contents">
 <ul>
-<li><a href="#%EB%8F%99%EA%B8%B0%EC%A0%81-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">동기적 프로그래밍</a></li>
+<li>
+<p><a href="#%EF%B8%8F-%EB%8F%99%EA%B8%B0synchronous">✔️ 동기(synchronous)</a></p>
+<ul>
+<li><a href="#-blocking">:: blocking</a></li>
 </ul>
-</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/css-layout/"><div class="direction">이전 글</div><div class="title">layout의 모든 것</div></a></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/immutable/"><div class="direction">다음 글</div><div class="title">불변성? Immutable</div></a></div></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/howyoujini">홍유진</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/동기-비동기/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-cd840d73727c2e366b63.js"],"app":["/app-34d779c2755fe84db625.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-3c26d4b7e3608ed0ece4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4917da7ef5b541e98a81.js"],"component---src-pages-about-js":["/component---src-pages-about-js-b5804eba3d16afcb3700.js"],"component---src-pages-index-js":["/component---src-pages-index-js-bc882cd03f70c89c8148.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-fea460fedd50cffb10cd.js"]};/*]]>*/</script><script src="/polyfill-cd840d73727c2e366b63.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js" async=""></script><script src="/app-34d779c2755fe84db625.js" async=""></script><script src="/framework-0e1bf37de02f7cef2174.js" async=""></script><script src="/webpack-runtime-c0fe5f7567b0e9a254ad.js" async=""></script></body></html>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0asynchronous">✔️ 비동기(asynchronous)</a></p>
+<ul>
+<li><a href="#-non-blocking">:: non-blocking</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EB%8F%99%EA%B8%B0-%EB%B9%84%EB%8F%99%EA%B8%B0">✔️ 자바스크립트는 동기? 비동기?</a></p>
+<ul>
+<li>
+<p><a href="#-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9Csingle-thread">:: 싱글스레드(Single Thread)</a></p>
+<ul>
+<li><a href="#-call-stack">::: Call Stack</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-dom-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%95%B8%EB%93%A4%EB%9F%AC">:: DOM 이벤트 핸들러</a></p>
+</li>
+<li>
+<p><a href="#-timer-%ED%95%A8%EC%88%98">:: Timer 함수</a></p>
+</li>
+<li>
+<p><a href="#-ajax-http-%EC%9A%94%EC%B2%AD">:: Ajax (HTTP 요청)</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0%EC%8B%9D-%EC%B2%98%EB%A6%AC%EB%B0%A9%EB%B2%95">✔️ 비동기식 처리방법</a></p>
+<ul>
+<li>
+<p><a href="#-callback-%ED%95%A8%EC%88%98">:: Callback 함수</a></p>
+</li>
+<li>
+<p><a href="#-promise-%EA%B0%9D%EC%B2%B4">:: Promise 객체</a></p>
+<ul>
+<li><a href="#-resolve">::: resolve</a></li>
+<li><a href="#-reject">::: reject</a></li>
+<li><a href="#-then">::: then</a></li>
+<li><a href="#-catch">::: catch</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-async-await">:: async await</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%9D%98-%ED%8A%B9%EC%84%B1">✔️ 비동기 처리의 특성</a></p>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC%EB%B0%A9%EB%B2%95">✔️ 에러 처리방법</a></p>
+</li>
+</ul>
+</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/facebook-meta/"><div class="direction">이전 글</div><div class="title">facebook, &quot;META&quot;로 이름 바꾼다?</div></a></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/transaction/"><div class="direction">다음 글</div><div class="title">DB 기초 transaction</div></a></div></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/howyoujini">홍유진</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/동기-비동기/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-cd840d73727c2e366b63.js"],"app":["/app-34d779c2755fe84db625.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-3c26d4b7e3608ed0ece4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4917da7ef5b541e98a81.js"],"component---src-pages-about-js":["/component---src-pages-about-js-b5804eba3d16afcb3700.js"],"component---src-pages-index-js":["/component---src-pages-index-js-bc882cd03f70c89c8148.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-ef83b594aa693e649d30.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-fea460fedd50cffb10cd.js"]};/*]]>*/</script><script src="/polyfill-cd840d73727c2e366b63.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-ef83b594aa693e649d30.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-3528d048b96f92ca0d99.js" async=""></script><script src="/app-34d779c2755fe84db625.js" async=""></script><script src="/framework-0e1bf37de02f7cef2174.js" async=""></script><script src="/webpack-runtime-c0fe5f7567b0e9a254ad.js" async=""></script></body></html>
