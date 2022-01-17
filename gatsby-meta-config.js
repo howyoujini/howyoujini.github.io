@@ -74,13 +74,13 @@ module.exports = {
       {
         title: 'Ready Books',
         description:
-          '개발 블로그를 운영하는 기간이 조금씩 늘어나고 점점 많은 생각과 경험이 블로그에 쌓아가면서 제 이야기를 담고 있는 블로그를 직접 만들어보고 싶게 되었습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 레퍼런스를 참고하여 직접 블로그 테마를 만들게 되었습니다.',
-        techStack: ['React', 'styled component'],
-        thumbnailUrl: 'blog.png',
+          '함께 책 읽을 준비 되셨나요? 회원이 구매한 책 3D로 구현 및 클릭시 상세페이지 이동 (라이브러리 : react-three-fiber), 베스트 셀러 10개 슬라이드 (라이브러리 : react-slick), 전체페이지 페이지네이션',
+        techStack: ['React', 'styled component', 'three.js'],
+        thumbnailUrl: 'readybooks.gif',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/howyoujini',
-          demo: 'https://www.zoomkoding.com',
+          post: '/',
+          github: 'https://github.com/howyoujini/27-2nd-ReadyBooks-frontend',
+          demo: 'http://readyreadybooks.s3-website.ap-northeast-2.amazonaws.com/',
         },
       },
     ],

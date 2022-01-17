@@ -79,6 +79,10 @@ console.log('세번째');
 console.log('첫번째');
 setTimeout(console.log('두번째'), 1000);
 console.log('세번째');
+// -------
+// '첫번째';
+// '세번째';
+// '두번째';
 ```
 
 #### ::: Call Stack
@@ -98,8 +102,6 @@ Ajax(Asynchronous JavaScript and XML)
 [mdn 공식문서 : Ajax](https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started)
 
 ---
-
--> 언제 이걸 명확히 실행 해줘야하는지? 백은?
 
 ## ✔️ 비동기식 처리방법
 

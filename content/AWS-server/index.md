@@ -1,6 +1,6 @@
 ---
 emoji: 🌐
-title: AWS 서버
+title: AWS
 date: '2022-01-14 22:00:00'
 author: 홍유진
 tags: 클라우드 서비스 가상화 분산처리 가상서버 네트워크
@@ -38,7 +38,7 @@ SaaS : Software as a Service
 PaaS : Platform as a Service
 IaaS : Infrastructure as a Service
 
-### :: 가상서버 : 인..
+### :: 가상서버 : 인스턴스
 
 ## :: LAN
 
